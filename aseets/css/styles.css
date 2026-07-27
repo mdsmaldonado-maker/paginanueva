@@ -115,7 +115,7 @@ input:focus, textarea:focus {
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(216, 179, 108, 0.5), transparent);
   box-shadow: 0 1px 5px rgba(216, 179, 108, 0.2);
-  margin: 3rem 0;
+  margin: 5rem 0;
 }
 
 /* Nebulosas ajustadas para profundidad tras las tarjetas */
