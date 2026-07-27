@@ -1,0 +1,133 @@
+:root {
+  --bg-void: #000000;
+  --bg-card: linear-gradient(145deg, #12131C 0%, #08080C 100%); /* Degradado interno para dar volumen */
+  --bg-card-hover: linear-gradient(145deg, #1A1B28 0%, #0E0F17 100%);
+  --accent-gold: #D8B36C;
+  --accent-cyan: #5EEAD4;
+  --accent-violet: #7C6CF6;
+  --text-main: #FFFFFF;
+  --text-muted: #A1A5C4;
+  
+  /* Relief & Elevation Shadows (Luz de relieve en fondo negro) */
+  --border-light: rgba(255, 255, 255, 0.15);
+  --shadow-elevation: 
+    0 10px 30px -5px rgba(0, 0, 0, 1),
+    0 0 15px 0px rgba(124, 108, 246, 0.08), /* Resplandor violeta muy suave */
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2); /* Bisel superior brillante */
+    
+  --shadow-elevation-hover: 
+    0 20px 40px -10px rgba(0, 0, 0, 1),
+    0 0 25px 2px rgba(216, 179, 108, 0.2), /* Resplandor dorado al pasar el cursor */
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================================
+   2. REGLAS GLOBALES Y RELIEVE EN CONTENEDORES
+   ========================================================= */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--bg-void) !important;
+  color: var(--text-main) !important;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* APLICAR RELIEVE 3D A TODAS LAS TARJETAS Y PANELES */
+.glass, .glass-panel, .card-tilt, .kpi-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-elevation) !important;
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease !important;
+}
+
+/* EFECTO DE ELEVACIÓN AL PASAR EL MOUSE (HOVER 3D) */
+.glass:hover, .glass-panel:hover, .card-tilt:hover, .kpi-card:hover {
+  transform: translateY(-6px) scale(1.01); /* La tarjeta "sube" hacia la pantalla */
+  background: var(--bg-card-hover) !important;
+  border-color: rgba(216, 179, 108, 0.5) !important;
+  box-shadow: var(--shadow-elevation-hover) !important;
+}
+
+/* =========================================================
+   3. RELIEVE EN ELEMENTOS ESPECÍFICOS
+   ========================================================= */
+
+/* Badges / Competencias con relieve tipo botón */
+.badge {
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 2px 8px rgba(0,0,0,0.8) !important;
+  color: #E2E8F0 !important;
+}
+
+.badge:hover {
+  background: linear-gradient(180deg, rgba(216, 179, 108, 0.25) 0%, rgba(216, 179, 108, 0.08) 100%) !important;
+  border-color: var(--accent-gold) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 12px rgba(216, 179, 108, 0.3) !important;
+}
+
+/* Botón principal con súper relieve (Efecto 3D pulsable) */
+.btn-cosmic, button[type="submit"] {
+  background: linear-gradient(180deg, #E8CD98 0%, #D8B36C 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 
+              0 6px 20px rgba(216, 179, 108, 0.35) !important;
+  border: 1px solid #F1DFB4 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-cosmic:hover, button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 
+              0 10px 25px rgba(216, 179, 108, 0.5) !important;
+}
+
+.btn-cosmic:active, button[type="submit"]:active {
+  transform: translateY(1px); /* Efecto de hundimiento al hacer click */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Inputs de formulario con relieve hundido (Inset) */
+input, textarea {
+  background-color: #08080C !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8) !important; /* Da la sensación de estar excavado */
+  color: #FFFFFF !important;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent-gold) !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(216, 179, 108, 0.3) !important;
+  outline: none;
+}
+
+/* Líneas divisorias con volumen de grabado */
+.divider-gold {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(216, 179, 108, 0.5), transparent);
+  box-shadow: 0 1px 5px rgba(216, 179, 108, 0.2);
+  margin: 3rem 0;
+}
+
+/* Nebulosas ajustadas para profundidad tras las tarjetas */
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { background: rgba(216, 179, 108, 0.3); border-radius: 4px; }

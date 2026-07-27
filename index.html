@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mattius Maldonado — Analista de People Analytics</title>
+<script src="https://cdn.tailwindcss.com"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.1/tailwind.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased bg-black text-[#EAE7F5]" style="background-color: #000000 !important;">
+<a href="#main" class="skip-link">Saltar al contenido</a>
+<canvas id="stars"></canvas>
+
+<!-- nebula glows -->
+<div class="nebula" style="top:-10%; left:-5%; width:520px; height:520px; background:radial-gradient(circle, rgba(124,108,246,0.28), transparent 70%);"></div>
+<div class="nebula" style="top:20%; right:-10%; width:600px; height:600px; background:radial-gradient(circle, rgba(216,179,108,0.14), transparent 70%);"></div>
+<div class="nebula" style="bottom:0%; left:20%; width:700px; height:700px; background:radial-gradient(circle, rgba(94,234,212,0.10), transparent 70%);"></div>
+
+<!-- ================= NAV ================= -->
+<header class="fixed top-0 w-full z-50 bg-[#05060F]/70 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="serif font-semibold text-xl tracking-wide text-[#EAE7F5]">
+      Mattius <span class="text-[#D8B36C]">Maldonado</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+      <a href="#impacto" class="nav-link">Impacto</a>
+      <a href="#competencias" class="nav-link">Competencias</a>
+      <a href="#experiencia" class="nav-link">Experiencia</a>
+      <a href="#certificaciones" class="nav-link">Certificaciones</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+    <a href="#contacto" class="hidden md:inline-flex bg-gradient-to-r from-[#D8B36C] to-[#E8CD98] hover:brightness-110 text-[#05060F] text-sm font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-[#D8B36C]/20">
+      Contactar
+    </a>
+    <button id="menuBtn" class="md:hidden text-[#EAE7F5]" aria-label="Abrir menú" aria-expanded="false">
+      <svg id="iconOpen" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="iconClose" class="hidden" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-[#05060F] border-t border-white/5 px-6 py-4 flex flex-col gap-4 text-[#9497B8] font-medium">
+    <a href="#sobre-mi" class="mobile-link">Sobre mí</a>
+    <a href="#impacto" class="mobile-link">Impacto</a>
+    <a href="#competencias" class="mobile-link">Competencias</a>
+    <a href="#experiencia" class="mobile-link">Experiencia</a>
+    <a href="#certificaciones" class="mobile-link">Certificaciones</a>
+    <a href="#contacto" class="mobile-link text-[#D8B36C]">Contacto</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section id="top" class="relative pt-32 pb-24 px-6 overflow-hidden">
+  <div class="shooting-star"></div>
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+
+    <div>
+      <span class="mono inline-flex items-center gap-2 text-xs font-semibold text-[#E8CD98] bg-[#D8B36C]/10 border border-[#D8B36C]/25 rounded-full px-3 py-1 mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#5EEAD4] live-dot"></span>
+        DISPONIBLE PARA MODALIDAD REMOTA
+      </span>
+      <h1 class="serif text-5xl sm:text-6xl lg:text-[4rem] font-semibold leading-[1.05] tracking-tight text-[#F4F2FA]">
+        Mattius Dilan<br>
+        Maldonado <span class="text-[#D8B36C]">Santellan</span>
+      </h1>
+      <p class="mt-6 text-lg text-[#C7C6DE] font-medium max-w-xl">
+        Analista Junior de Recursos Humanos — Especialista en Análisis de Datos de RR. HH. y Operaciones de Personal.
+      </p>
+      <p class="mt-4 text-[#9497B8] max-w-xl leading-relaxed">
+        Optimizo procesos de personal, automatización de onboarding y análisis de métricas clave
+        (e-NPS, rotación, tiempo de contratación) en entornos tecnológicos.
+      </p>
+
+      <div class="mt-5 flex items-center gap-2 text-sm text-[#9497B8]">
+        <svg width="16" height="16" fill="none" stroke="#D8B36C" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Quito, Ecuador
+      </div>
+
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="mailto:mattius1.21@gmail.com" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#D8B36C] to-[#E8CD98] hover:brightness-110 text-[#05060F] font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-[#D8B36C]/25 hover:-translate-y-0.5">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Contactar por Email
+        </a>
+        <a href="https://www.linkedin.com/in/mattius-dilan-maldonado-santellan-8bb812423" target="_blank" rel="noopener" class="glass inline-flex items-center gap-2 text-[#EAE7F5] font-semibold px-6 py-3.5 rounded-lg hover:border-[#D8B36C]/40 hover:-translate-y-0.5">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-1.337-.026-3.059-1.865-3.059-1.867 0-2.154 1.459-2.154 2.964v5.699h-3v-11h2.881v1.507h.041c.401-.759 1.379-1.559 2.841-1.559 3.038 0 3.599 2.001 3.599 4.604v6.448z"/></svg>
+          Ver LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- SIGNATURE ELEMENT: holographic star-chart dashboard -->
+    <div class="relative float">
+      <div class="card-tilt glass rounded-2xl shadow-2xl shadow-black/60 p-6">
+        <div class="flex items-center justify-between mb-5">
+          <div>
+            <p class="mono text-[11px] text-[#7A7DA0] tracking-wide">CARTA_PEOPLE_ANALYTICS.pbix</p>
+            <p class="serif font-semibold text-lg text-[#F4F2FA]">Tech Talent Solutions</p>
+          </div>
+          <span class="mono flex items-center gap-1.5 text-[11px] font-semibold text-[#5EEAD4] bg-[#5EEAD4]/10 px-2 py-1 rounded-full border border-[#5EEAD4]/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#5EEAD4] live-dot"></span> LIVE
+          </span>
+        </div>
+
+        <!-- bar chart -->
+        <div class="flex items-end gap-3 h-32 mb-5 border-b border-white/10 pb-3">
+          <div class="flex-1 flex flex-col items-center justify-end h-full">
+            <div class="w-full bg-gradient-to-t from-[#7C6CF6] to-[#B7ACFB] rounded-t-md bar" style="height:45%; animation-delay:.1s"></div>
+            <span class="mono text-[10px] text-[#7A7DA0] mt-2">Ene</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center justify-end h-full">
+            <div class="w-full bg-gradient-to-t from-[#7C6CF6] to-[#B7ACFB] rounded-t-md bar" style="height:62%; animation-delay:.2s"></div>
+            <span class="mono text-[10px] text-[#7A7DA0] mt-2">Feb</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center justify-end h-full">
+            <div class="w-full bg-gradient-to-t from-[#D8B36C] to-[#F1DFB4] rounded-t-md bar" style="height:58%; animation-delay:.3s"></div>
+            <span class="mono text-[10px] text-[#7A7DA0] mt-2">Mar</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center justify-end h-full">
+            <div class="w-full bg-gradient-to-t from-[#7C6CF6] to-[#B7ACFB] rounded-t-md bar" style="height:80%; animation-delay:.4s"></div>
+            <span class="mono text-[10px] text-[#7A7DA0] mt-2">Abr</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center justify-end h-full">
+            <div class="w-full bg-gradient-to-t from-[#D8B36C] to-[#F1DFB4] rounded-t-md bar" style="height:96%; animation-delay:.5s"></div>
+            <span class="mono text-[10px] text-[#7A7DA0] mt-2">May</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white/5 rounded-lg p-3 border border-white/5">
+            <p class="mono text-[10px] text-[#7A7DA0]">e-NPS</p>
+            <p class="serif font-bold text-[#F4F2FA] text-xl">92<span class="text-[#5EEAD4]">%</span></p>
+          </div>
+          <div class="bg-white/5 rounded-lg p-3 border border-white/5">
+            <p class="mono text-[10px] text-[#7A7DA0]">ROTACIÓN</p>
+            <p class="serif font-bold text-[#F4F2FA] text-xl">-18<span class="text-[#5EEAD4]">%</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6"><div class="divider-gold"></div></div>
+
+<!-- ================= IMPACTO / KPIs ================= -->
+<section id="impacto" class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up text-center max-w-2xl mx-auto mb-14">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">RESULTADOS MEDIBLES</p>
+      <h2 class="serif text-4xl sm:text-5xl font-semibold text-[#F4F2FA] mt-2">Impacto en cifras</h2>
+      <p class="text-[#9497B8] mt-3">Cada proceso que optimizo se traduce en un número. Estos son los que dejé en mi paso por Operaciones de Personal.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="kpi-card fade-up glass rounded-2xl p-6">
+        <svg class="mb-4" width="26" height="26" fill="none" stroke="#D8B36C" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        <p class="serif text-4xl font-semibold text-[#F4F2FA]"><span class="counter" data-target="-35">0</span>%</p>
+        <p class="text-[#9497B8] text-sm mt-2">Reducción en tiempo de onboarding de nuevos empleados</p>
+      </div>
+      <div class="kpi-card fade-up glass rounded-2xl p-6" style="transition-delay:.05s">
+        <svg class="mb-4" width="26" height="26" fill="none" stroke="#5EEAD4" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="serif text-4xl font-semibold text-[#F4F2FA]"><span class="counter" data-target="92">0</span>%</p>
+        <p class="text-[#9497B8] text-sm mt-2">Nivel e-NPS de satisfacción alcanzado</p>
+      </div>
+      <div class="kpi-card fade-up glass rounded-2xl p-6" style="transition-delay:.1s">
+        <svg class="mb-4" width="26" height="26" fill="none" stroke="#7C6CF6" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4z"/></svg>
+        <p class="serif text-4xl font-semibold text-[#F4F2FA]"><span class="counter" data-target="-18">0</span>%</p>
+        <p class="text-[#9497B8] text-sm mt-2">Reducción anual en rotación voluntaria</p>
+      </div>
+      <div class="kpi-card fade-up glass rounded-2xl p-6" style="transition-delay:.15s">
+        <svg class="mb-4" width="26" height="26" fill="none" stroke="#D8B36C" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <p class="serif text-4xl font-semibold text-[#F4F2FA]"><span class="counter" data-target="28">0</span> días</p>
+        <p class="text-[#9497B8] text-sm mt-2">Tiempo de contratación optimizado (antes 45 días)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE MÍ ================= -->
+<section id="sobre-mi" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-[0.4fr_0.6fr] gap-14 items-start">
+    <div class="fade-up">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">SOBRE MÍ</p>
+      <h2 class="serif text-4xl sm:text-5xl font-semibold text-[#F4F2FA] mt-2 leading-tight">Datos con propósito de personas</h2>
+    </div>
+    <div class="fade-up space-y-5 text-[#C7C6DE] leading-relaxed text-lg">
+      <p>
+        Analista de Recursos Humanos con <strong class="text-[#F4F2FA]">más de 1.5 años de experiencia</strong> optimizando procesos de Operaciones de Personal, reclutamiento y relaciones laborales en entornos remotos y tecnológicos.
+      </p>
+      <p>
+        Especializado en la implementación de políticas de RR. HH., análisis de métricas de talento (e-NPS, rotación de personal, tiempo de contratación) y automatización de procesos de incorporación. Experiencia práctica gestionando sistemas HRIS y garantizando el estricto cumplimiento de normativas laborales.
+      </p>
+      <div class="flex items-center gap-4 glass rounded-xl p-5 mt-6">
+        <div class="w-11 h-11 flex-shrink-0 rounded-full bg-gradient-to-br from-[#D8B36C] to-[#E8CD98] text-[#05060F] flex items-center justify-center font-bold mono">C1</div>
+        <p class="text-[#C7C6DE] text-base">
+          <strong class="text-[#F4F2FA]">Inglés profesional (C1)</strong> orientado a la colaboración efectiva en equipos multiculturales y remotos de alto rendimiento.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6"><div class="divider-gold"></div></div>
+
+<!-- ================= COMPETENCIAS ================= -->
+<section id="competencias" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="fade-up mb-14 max-w-2xl">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">STACK & COMPETENCIAS</p>
+      <h2 class="serif text-4xl sm:text-5xl font-semibold text-[#F4F2FA] mt-2">De la estrategia al dashboard</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="fade-up glass rounded-2xl p-7">
+        <h3 class="serif font-semibold text-xl text-[#F4F2FA] mb-4 flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#D8B36C]"></span> Operaciones & Estrategia
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Relaciones laborales</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Onboarding / Offboarding</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Resolución de conflictos</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Cumplimiento normativo</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Gestión del desempeño</span>
+        </div>
+      </div>
+
+      <div class="fade-up glass rounded-2xl p-7" style="transition-delay:.05s">
+        <h3 class="serif font-semibold text-xl text-[#F4F2FA] mb-4 flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#5EEAD4]"></span> Análisis de Datos
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">People Analytics</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">e-NPS</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Análisis de rotación</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Dashboards en Power BI</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Excel avanzado (Tablas dinámicas, BUSCARX)</span>
+        </div>
+      </div>
+
+      <div class="fade-up glass rounded-2xl p-7" style="transition-delay:.1s">
+        <h3 class="serif font-semibold text-xl text-[#F4F2FA] mb-4 flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#7C6CF6]"></span> Sistemas HRIS & ATS
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Workday</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">BambooHR</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Greenhouse</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Lever</span>
+        </div>
+      </div>
+
+      <div class="fade-up glass rounded-2xl p-7" style="transition-delay:.15s">
+        <h3 class="serif font-semibold text-xl text-[#F4F2FA] mb-4 flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#D8B36C]"></span> Productividad
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Slack</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Jira</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Confluence</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">Google Workspace</span>
+          <span class="badge text-[#C7C6DE] text-sm rounded-full px-3 py-1.5">MS Office 365</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-up mt-6 flex flex-wrap gap-4">
+      <div class="flex-1 min-w-[220px] glass rounded-2xl p-6 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-[#7A7DA0] mono">IDIOMA</p>
+          <p class="serif font-semibold text-lg text-[#F4F2FA]">Español</p>
+        </div>
+        <span class="text-xs font-semibold bg-white/5 border border-white/10 px-3 py-1 rounded-full text-[#C7C6DE]">Nativo</span>
+      </div>
+      <div class="flex-1 min-w-[220px] glass rounded-2xl p-6 flex items-center justify-between">
+        <div>
+          <p class="text-xs text-[#7A7DA0] mono">IDIOMA</p>
+          <p class="serif font-semibold text-lg text-[#F4F2FA]">Inglés</p>
+        </div>
+        <span class="text-xs font-semibold bg-gradient-to-r from-[#D8B36C] to-[#E8CD98] text-[#05060F] px-3 py-1 rounded-full">C1 · Avanzado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6"><div class="divider-gold"></div></div>
+
+<!-- ================= EXPERIENCIA ================= -->
+<section id="experiencia" class="py-24 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="fade-up mb-16 text-center">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">TRAYECTORIA</p>
+      <h2 class="serif text-4xl sm:text-5xl font-semibold text-[#F4F2FA] mt-2">Experiencia profesional</h2>
+    </div>
+
+    <div class="relative pl-8 space-y-14">
+      <div class="constellation-line absolute left-0 top-2 bottom-2"></div>
+
+      <div class="fade-up relative">
+        <span class="star-dot absolute -left-[33px] top-1 w-2.5 h-2.5 rounded-full bg-[#D8B36C]"></span>
+        <p class="mono text-xs text-[#D8B36C] font-semibold tracking-wide mb-1">ENE 2024 — PRESENTE</p>
+        <h3 class="serif text-2xl font-semibold text-[#F4F2FA]">Analista Junior de Recursos Humanos</h3>
+        <p class="text-[#9497B8] mb-4">Tech Talent Solutions · Remoto</p>
+        <ul class="space-y-2.5 text-[#C7C6DE]">
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Automatizó flujos HRIS, reduciendo el tiempo de incorporación en 35% y elevando la satisfacción e-NPS al 92%.</li>
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Gestionó relaciones laborales para +120 colaboradores remotos, reduciendo la rotación voluntaria en 18% anual.</li>
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Creó tableros ejecutivos en Power BI y Excel para identificar cuellos de botella en retención de talento.</li>
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Alcanzó 100% de cumplimiento legal en auditorías trimestrales de expedientes de personal.</li>
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Lideró evaluaciones de 360° para +80 empleados, con 98% de completitud a tiempo.</li>
+        </ul>
+      </div>
+
+      <div class="fade-up relative">
+        <span class="star-dot absolute -left-[33px] top-1 w-2.5 h-2.5 rounded-full bg-[#D8B36C]"></span>
+        <p class="mono text-xs text-[#D8B36C] font-semibold tracking-wide mb-1">JUL 2023 — DIC 2023</p>
+        <h3 class="serif text-2xl font-semibold text-[#F4F2FA]">Asistente de RR. HH. y Coordinador de Reclutamiento</h3>
+        <p class="text-[#9497B8] mb-4">Innova Services</p>
+        <ul class="space-y-2.5 text-[#C7C6DE]">
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Aceleró el tiempo de contratación técnica de 45 a 28 días en promedio.</li>
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Elaboró e implementó la guía de políticas internas y el protocolo formal de desvinculación.</li>
+          <li class="flex gap-3"><svg class="flex-shrink-0 mt-1" width="16" height="16" fill="none" stroke="#5EEAD4" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Gestionó comunicación bilingüe (inglés/español) para equipos distribuidos en LatAm y EE. UU.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6"><div class="divider-gold"></div></div>
+
+<!-- ================= EDUCACIÓN & CERTIFICACIONES ================= -->
+<section id="certificaciones" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14">
+    <div class="fade-up">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">FORMACIÓN</p>
+      <h2 class="serif text-3xl font-semibold text-[#F4F2FA] mt-2 mb-8">Educación</h2>
+      <div class="glass rounded-2xl p-7">
+        <p class="mono text-xs text-[#7A7DA0] mb-2">GRADUACIÓN ESTIMADA · 2028</p>
+        <h3 class="serif font-semibold text-[#F4F2FA] text-xl leading-snug">Licenciatura en Administración de Empresas / Psicología Organizacional / Relaciones Laborales</h3>
+        <p class="text-[#9497B8] mt-2">Instituto Superior Yavirac</p>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">CREDENCIALES</p>
+      <h2 class="serif text-3xl font-semibold text-[#F4F2FA] mt-2 mb-8">Certificaciones</h2>
+      <div class="space-y-4">
+        <div class="badge flex items-center justify-between rounded-xl p-5">
+          <div>
+            <p class="font-semibold text-[#F4F2FA]">People Analytics — Análisis de Datos de Personal</p>
+            <p class="text-[#9497B8] text-sm">AIHR</p>
+          </div>
+          <span class="text-xs font-semibold bg-[#5EEAD4]/10 text-[#5EEAD4] border border-[#5EEAD4]/20 px-3 py-1 rounded-full whitespace-nowrap">Completado</span>
+        </div>
+        <div class="badge flex items-center justify-between rounded-xl p-5">
+          <div>
+            <p class="font-semibold text-[#F4F2FA]">SHRM-CP Associate</p>
+            <p class="text-[#9497B8] text-sm">SHRM</p>
+          </div>
+          <span class="text-xs font-semibold bg-[#D8B36C]/10 text-[#E8CD98] border border-[#D8B36C]/20 px-3 py-1 rounded-full whitespace-nowrap">En preparación</span>
+        </div>
+        <div class="badge flex items-center justify-between rounded-xl p-5">
+          <div>
+            <p class="font-semibold text-[#F4F2FA]">Competencia Profesional en Inglés C1</p>
+            <p class="text-[#9497B8] text-sm">EF SET / Cambridge</p>
+          </div>
+          <span class="text-xs font-semibold bg-[#5EEAD4]/10 text-[#5EEAD4] border border-[#5EEAD4]/20 px-3 py-1 rounded-full whitespace-nowrap">Completado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<footer id="contacto" class="py-24 px-6 border-t border-white/5">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16">
+    <div class="fade-up">
+      <p class="mono text-[#D8B36C] text-sm font-semibold tracking-wide">HABLEMOS</p>
+      <h2 class="serif text-4xl sm:text-5xl font-semibold text-[#F4F2FA] mt-2 leading-tight">¿Listos para optimizar las operaciones de personal en tu empresa?</h2>
+      <p class="text-[#9497B8] mt-4 max-w-md">Respondo con gusto a mensajes sobre oportunidades de People Analytics, RR. HH. remoto u operaciones de personal.</p>
+
+      <div class="mt-10 space-y-5">
+        <a href="mailto:mattius1.21@gmail.com" class="flex items-center gap-4 group">
+          <span class="w-11 h-11 flex-shrink-0 rounded-full glass flex items-center justify-center group-hover:border-[#D8B36C]/50 transition">
+            <svg width="18" height="18" fill="none" stroke="#D8B36C" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </span>
+          <span class="text-[#C7C6DE] group-hover:text-[#F4F2FA]">mattius1.21@gmail.com</span>
+        </a>
+        <a href="tel:0979879023" class="flex items-center gap-4 group">
+          <span class="w-11 h-11 flex-shrink-0 rounded-full glass flex items-center justify-center group-hover:border-[#D8B36C]/50 transition">
+            <svg width="18" height="18" fill="none" stroke="#D8B36C" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </span>
+          <span class="text-[#C7C6DE] group-hover:text-[#F4F2FA]">0979879023</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mattius-dilan-maldonado-santellan-8bb812423" target="_blank" rel="noopener" class="flex items-center gap-4 group">
+          <span class="w-11 h-11 flex-shrink-0 rounded-full glass flex items-center justify-center group-hover:border-[#D8B36C]/50 transition">
+            <svg width="16" height="16" fill="#D8B36C" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.766 1.75-1.766 1.75.79 1.75 1.766-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-1.337-.026-3.059-1.865-3.059-1.867 0-2.154 1.459-2.154 2.964v5.699h-3v-11h2.881v1.507h.041c.401-.759 1.379-1.559 2.841-1.559 3.038 0 3.599 2.001 3.599 4.604v6.448z"/></svg>
+          </span>
+          <span class="text-[#C7C6DE] group-hover:text-[#F4F2FA]">linkedin.com/in/mattius-dilan-maldonado-santellan</span>
+        </a>
+      </div>
+    </div>
+
+    <form id="contactForm" class="fade-up glass rounded-2xl p-7 space-y-4">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label for="name" class="text-xs text-[#7A7DA0] mono">NOMBRE</label>
+          <input id="name" required type="text" class="w-full mt-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-[#F4F2FA] placeholder-[#5C5E7A]" placeholder="Tu nombre">
+        </div>
+        <div>
+          <label for="email" class="text-xs text-[#7A7DA0] mono">EMAIL</label>
+          <input id="email" required type="email" class="w-full mt-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-[#F4F2FA] placeholder-[#5C5E7A]" placeholder="tu@correo.com">
+        </div>
+      </div>
+      <div>
+        <label for="subject" class="text-xs text-[#7A7DA0] mono">ASUNTO</label>
+        <input id="subject" required type="text" class="w-full mt-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-[#F4F2FA] placeholder-[#5C5E7A]" placeholder="Oportunidad, colaboración...">
+      </div>
+      <div>
+        <label for="message" class="text-xs text-[#7A7DA0] mono">MENSAJE</label>
+        <textarea id="message" required rows="4" class="w-full mt-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-[#F4F2FA] placeholder-[#5C5E7A] resize-none" placeholder="Cuéntame en qué estás pensando..."></textarea>
+      </div>
+      <button type="submit" class="w-full bg-gradient-to-r from-[#D8B36C] to-[#E8CD98] hover:brightness-110 text-[#05060F] font-semibold py-3.5 rounded-lg">
+        Enviar mensaje
+      </button>
+      <p id="formNote" class="text-xs text-[#7A7DA0] text-center pt-1">Se abrirá tu cliente de correo con el mensaje listo para enviar.</p>
+    </form>
+  </div>
+
+  <div class="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/5 text-center text-[#7A7DA0] text-sm">
+    © 2026 Mattius Dilan Maldonado Santellan · Quito, Ecuador
+  </div>
+
+  <div id="ctaModal" class="modal-backdrop hidden" aria-hidden="true">
+  <div class="modal-content glass-panel p-6 sm:p-8 max-w-lg w-full relative mx-4">
+    
+    <!-- Botón para cerrar (X) -->
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-[#A1A5C4] hover:text-white transition-colors" aria-label="Cerrar modal">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Encabezado del Modal -->
+    <div class="mb-6">
+      <span class="mono text-xs font-semibold text-[#D8B36C] tracking-wide">HABLEMOS DE TU PROYECTO</span>
+      <h3 class="serif text-2xl sm:text-3xl font-semibold text-white mt-1">Envía un mensaje</h3>
+      <p class="text-sm text-[#A1A5C4] mt-1">Completa tus datos y me pondré en contacto contigo lo antes posible.</p>
+    </div>
+
+    <!-- Formulario dentro del Modal -->
+    <form id="modalContactForm" onsubmit="handleModalSubmit(event)" class="space-y-4">
+      <div>
+        <label for="modalName" class="block text-xs font-semibold text-[#A1A5C4] mono mb-1">NOMBRE COMPLETO</label>
+        <input id="modalName" required type="text" class="w-full px-4 py-2.5 text-sm rounded-lg" placeholder="Ej. Ana Martínez">
+      </div>
+
+      <div>
+        <label for="modalEmail" class="block text-xs font-semibold text-[#A1A5C4] mono mb-1">CORREO ELECTRÓNICO</label>
+        <input id="modalEmail" required type="email" class="w-full px-4 py-2.5 text-sm rounded-lg" placeholder="tu@empresa.com">
+      </div>
+
+      <div>
+        <label for="modalSubject" class="block text-xs font-semibold text-[#A1A5C4] mono mb-1">ASUNTO</label>
+        <input id="modalSubject" required type="text" class="w-full px-4 py-2.5 text-sm rounded-lg" placeholder="People Analytics, Consultoría, Vacante...">
+      </div>
+
+      <div>
+        <label for="modalMessage" class="block text-xs font-semibold text-[#A1A5C4] mono mb-1">MENSAJE</label>
+        <textarea id="modalMessage" required rows="3" class="w-full px-4 py-2.5 text-sm rounded-lg resize-none" placeholder="Cuéntame brevemente sobre la oportunidad o consulta..."></textarea>
+      </div>
+
+      <button type="submit" class="w-full btn-cosmic font-semibold py-3 rounded-lg text-sm transition-all mt-2 cursor-pointer">
+        Enviar Propuesta
+      </button>
+    </form>
+  </div>
+</div>
+</footer>
+</main>
+</body>
+</head>
+</html>
